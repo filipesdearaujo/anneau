@@ -61,16 +61,11 @@ class ViewController: UIViewController {
     }
 
     @IBAction func sliderChanged(_ sender: UISlider) {
-        let rounded = round(100 * sender.value) / 100
-        let final = rounded
-        valueRing.text = "\(Int(final))"
+        valueRing.text = "\(Int(round(100 * sender.value) / 100))"
         sliderValueChanged()
     }
 
-    @IBAction func modePressed(_ sender: UIButton) {
-//        let storyboard = self.storyboard?.instantiateViewController(withIdentifier: "FingerViewController") as! FingerViewController
-//        self.navigationController?.pushViewController(storyboard, animated: true)
-        
+    @IBAction func modePressed(_ sender: UIButton) {  
         self.performSegue(withIdentifier: "screen", sender: self)
     }
     
