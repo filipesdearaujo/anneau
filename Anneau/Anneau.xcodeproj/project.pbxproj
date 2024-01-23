@@ -14,6 +14,7 @@
 		C4AA18702B56A4820037869F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4AA186F2B56A4820037869F /* Assets.xcassets */; };
 		C4AA18732B56A4820037869F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4AA18712B56A4820037869F /* LaunchScreen.storyboard */; };
 		C4AA187B2B56A4DA0037869F /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AA187A2B56A4DA0037869F /* CircleView.swift */; };
+		C4AD624A2B5F390600D1B16F /* FingerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AD62492B5F390600D1B16F /* FingerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		C4AA18722B56A4820037869F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C4AA18742B56A4820037869F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4AA187A2B56A4DA0037869F /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		C4AD62492B5F390600D1B16F /* FingerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FingerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				C4AA18682B56A4800037869F /* SceneDelegate.swift */,
 				C4AA186A2B56A4800037869F /* ViewController.swift */,
 				C4AA187A2B56A4DA0037869F /* CircleView.swift */,
+				C4AD62492B5F390600D1B16F /* FingerViewController.swift */,
 				C4AA186C2B56A4800037869F /* Main.storyboard */,
 				C4AA186F2B56A4820037869F /* Assets.xcassets */,
 				C4AA18712B56A4820037869F /* LaunchScreen.storyboard */,
@@ -145,6 +148,7 @@
 				C4AA186B2B56A4800037869F /* ViewController.swift in Sources */,
 				C4AA18672B56A4800037869F /* AppDelegate.swift in Sources */,
 				C4AA18692B56A4800037869F /* SceneDelegate.swift in Sources */,
+				C4AD624A2B5F390600D1B16F /* FingerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

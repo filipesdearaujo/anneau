@@ -68,6 +68,10 @@ class ViewController: UIViewController {
     }
 
     @IBAction func modePressed(_ sender: UIButton) {
+//        let storyboard = self.storyboard?.instantiateViewController(withIdentifier: "FingerViewController") as! FingerViewController
+//        self.navigationController?.pushViewController(storyboard, animated: true)
+        
+        self.performSegue(withIdentifier: "screen", sender: self)
     }
     
     
