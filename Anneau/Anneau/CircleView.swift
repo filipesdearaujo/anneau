@@ -21,7 +21,7 @@ class CircleView: UIView {
 
     func circulo(){
         let circle = UIBezierPath(arcCenter: CGPoint(x: bounds.width/2, y: bounds.height/2), radius: radius, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
-        circle.lineWidth = 3
+        circle.lineWidth = 2.0
         circle.stroke()
     }
 

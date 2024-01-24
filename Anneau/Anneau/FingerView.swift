@@ -13,23 +13,20 @@ class FingerView: UIView {
     
     override func draw(_ rect: CGRect) {
         // Drawing code
-        line()
+       // fixedline()
+        line(x:bounds.width/2, y:bounds.height)
+        line(x: (bounds.width/2 - size), y: bounds.height)
+        line(x: (bounds.width/2 + size), y: bounds.height)
         }
     
-    
-    
-    
-    
-    
-    
-    
-    func line(){
+    func line(x: CGFloat, y: CGFloat){
         let line = UIBezierPath()
-        line.move(to: CGPoint(x: 100, y: 0))
-        line.addLine(to: CGPoint(x: 100, y: 400))
-        line.lineWidth = 3
+        line.move(to: CGPoint(x: x, y: 0))
+        line.addLine(to: CGPoint(x: x, y: y))
+        line.lineWidth = 2
         line.stroke()
     }
+    
     
     func updateSize(_ newSize: CGFloat) {
             // Atualizar o tamanho e solicitar uma nova exibição
