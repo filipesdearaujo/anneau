@@ -7,7 +7,7 @@
 
 // 72 points = 25.4 mm = 1Pol
 // So 1 mm  = 72/25.4 pt = 2,83pt
-
+// https://forums.developer.apple.com/forums/thread/669276
 
 import UIKit
 
@@ -18,7 +18,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var circleView: CircleView!
     @IBOutlet weak var valueMm: UILabel!
     @IBOutlet weak var BotaoAnel: UIButton!
-    
     
     
     let ringSize: [Int: CGFloat] = [
@@ -51,8 +50,6 @@ class ViewController: UIViewController {
         27: 22.20
     ]
 
-
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,25 +66,22 @@ class ViewController: UIViewController {
         self.performSegue(withIdentifier: "screen", sender: self)
     }
     
-    
+
     @objc func sliderValueChanged() {
         // Atualizar o raio da CircleView quando o valor do slider for alterado
-        let milimeters = calcularValorParaChave(key:CGFloat(sliderRing.value), dicionario: ringSize)
-        circleView.updateRadius(milimeters!)
-        let valueMM = updateValorMM(key: CGFloat(sliderRing.value), dicionario: ringSize)
-        valueMm.text = "\(valueMM ?? 18.14)mm"
+        circleView.updateRadius(calcularValorParaChave(key:CGFloat(sliderRing.value))!)
+        valueMm.text = "\(updateValorMM(key: CGFloat(sliderRing.value)) ?? 18.14)mm"
     }
-    
-    func calcularValorParaChave(key: CGFloat, dicionario: [Int:CGFloat]) -> CGFloat? {
+
+    func calcularValorParaChave(key: CGFloat) -> CGFloat? {
                 if let valor = ringSize[Int(key)] {
-            let resultado = 72.0 * valor / 25.4
-            return CGFloat(resultado)
+                    return CGFloat(valor * 2.83)
         } else {
             return nil  // Retorna nil se a chave não existir em ringSize
         }
     }
-    
-    func updateValorMM(key: CGFloat, dicionario: [Int:CGFloat]) -> CGFloat? {
+
+    func updateValorMM(key: CGFloat) -> CGFloat? {
                 if let valor = ringSize[Int(key)] {
             return CGFloat(valor)
         } else {

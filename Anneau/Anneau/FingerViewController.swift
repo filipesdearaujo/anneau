@@ -5,6 +5,10 @@
 //  Created by Filipe Simões on 22/01/24.
 //
 
+// 72 points = 25.4 mm = 1Pol
+// So 1 mm  = 72/25.4 pt = 2,83pt
+// https://forums.developer.apple.com/forums/thread/669276
+
 import UIKit
 
 class FingerViewController: UIViewController {
@@ -43,13 +47,11 @@ class FingerViewController: UIViewController {
         26: 21.79,
         27: 22.20
     ]
-    
+
     @IBAction func sliderChanged(_ sender: UISlider) {
         valueRing.text = "\(Int(round(100 * sender.value) / 100))"
         sliderValueChanged()
     }
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,22 +60,19 @@ class FingerViewController: UIViewController {
     
     @objc func sliderValueChanged() {
         // Atualizar o raio da CircleView quando o valor do slider for alterado
-        let milimeters = calcularValorParaChave(key:CGFloat(sliderRing.value), dicionario: ringSize)
-        fingerView.updateSize(milimeters!)
-        let valueMM = updateValorMM(key: CGFloat(sliderRing.value), dicionario: ringSize)
-        valueMm.text = "\(valueMM ?? 18.14)mm"
+        fingerView.updateSize(calcularValorParaChave(key:CGFloat(sliderRing.value))!)
+        valueMm.text = "\(updateValorMM(key: CGFloat(sliderRing.value)) ?? 18.14)mm"
     }
     
-    func calcularValorParaChave(key: CGFloat, dicionario: [Int:CGFloat]) -> CGFloat? {
+    func calcularValorParaChave(key: CGFloat) -> CGFloat? {
                 if let valor = ringSize[Int(key)] {
-            let resultado = 72.0 * valor / 25.4
-            return CGFloat(resultado)
+                    return CGFloat(valor * 2.83)
         } else {
             return nil  // Retorna nil se a chave não existir em ringSize
         }
     }
     
-    func updateValorMM(key: CGFloat, dicionario: [Int:CGFloat]) -> CGFloat? {
+    func updateValorMM(key: CGFloat) -> CGFloat? {
                 if let valor = ringSize[Int(key)] {
             return CGFloat(valor)
         } else {
