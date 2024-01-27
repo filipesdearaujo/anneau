@@ -15,6 +15,7 @@ class FingerViewController: UIViewController {
     @IBOutlet weak var valueRing: UILabel!
     @IBOutlet weak var sliderRing: UISlider!
     @IBOutlet weak var valueMm: UILabel!
+    @IBOutlet weak var helpButton: UIButton!
     
     @IBAction func sliderChanged(_ sender: UISlider) {
         valueRing.text = "\(Int(round(100 * sender.value) / 100))"
@@ -23,6 +24,8 @@ class FingerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        sliderValueChanged()
+        helpButton.layer.cornerRadius = helpButton.bounds.height/2
     }
 
     @objc func sliderValueChanged() {

@@ -21,7 +21,7 @@ class FingerView: UIView {
         let line = UIBezierPath()
         line.move(to: CGPoint(x: x, y: 0))
         line.addLine(to: CGPoint(x: x, y: y))
-        line.lineWidth = 2
+        line.lineWidth = 3
         line.stroke()
     }
     
