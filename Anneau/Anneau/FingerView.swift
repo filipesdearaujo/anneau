@@ -12,11 +12,9 @@ class FingerView: UIView {
     var size: CGFloat = 19
     
     override func draw(_ rect: CGRect) {
-        // Drawing code
-       // fixedline()
         line(x:bounds.width/2, y:bounds.height)
-        line(x: (bounds.width/2 - size), y: bounds.height)
         line(x: (bounds.width/2 + size), y: bounds.height)
+        line(x: (bounds.width/2 - size), y: bounds.height)
         }
     
     func line(x: CGFloat, y: CGFloat){

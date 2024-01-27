@@ -7,6 +7,7 @@
 // 72 points = 25.4 mm = 1Pol
 // So 1 mm  = 72/25.4 pt = 2,83pt
 // https://forums.developer.apple.com/forums/thread/669276
+//https://forums.developer.apple.com/forums/thread/688775
 
 import UIKit
 
@@ -42,19 +43,21 @@ struct CalculatePointToMm {
         27: 22.20
     ]
     
-    func calcularValorParaChave(key: CGFloat) -> CGFloat? {
-                if let valor = ringSize[Int(key)] {
-                    return CGFloat(valor * 2.83)
-        } else {
-            return nil  // Retorna nil se a chave não existir em ringSize
-        }
+    func calcularValorParaChave(key: Int) -> CGFloat {
+        let valor = ringSize[Int(key)]
+        
+        let scale = UIScreen.main.scale // Obtém a densidade da tela
+        let points = ((valor! * scale) + 2)
+        print(points)
+        return points // Converte e retorna o valor em milímetros para pontos
     }
-
-    func updateValorMM(key: CGFloat) -> CGFloat? {
-                if let valor = ringSize[Int(key)] {
-            return CGFloat(valor)
-        } else {
-            return nil  // Retorna nil se a chave não existir em ringSize
+    
+        func updateValorMM(key: CGFloat) -> CGFloat? {
+                    if let valor = ringSize[Int(key)] {
+                return CGFloat(valor)
+            } else {
+                return nil  // Retorna nil se a chave não existir em ringSize
+            }
         }
-    }
+    
 }

@@ -23,12 +23,10 @@ class FingerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
-    
+
     @objc func sliderValueChanged() {
-        // Atualizar o raio da CircleView quando o valor do slider for alterado
-        fingerView.updateSize(calculatePointToMm.calcularValorParaChave(key:CGFloat(sliderRing.value))!)
-        valueMm.text = "\(calculatePointToMm.updateValorMM(key: CGFloat(sliderRing.value)) ?? 18.14)mm"
+        fingerView.updateSize(calculatePointToMm.calcularValorParaChave(key:Int(sliderRing.value))) // Atualizar o raio da CircleView quando o valor do slider for alterado
+        valueMm.text = "\(calculatePointToMm.updateValorMM(key: CGFloat(sliderRing.value)) ?? 18.14)mm" // Atualizar o texto de Milimetros da CircleView quando o valor do slider for alterado
     }
 }

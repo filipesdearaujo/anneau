@@ -16,11 +16,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var circleView: CircleView!
     @IBOutlet weak var valueMm: UILabel!
     @IBOutlet weak var BotaoAnel: UIButton!
+    @IBOutlet weak var controlView: UIView!
+    @IBOutlet weak var botaoAjuda: UIButton!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         circleView.updateRadius(16)
         sliderValueChanged()
+        setupButton()
     }
 
     @IBAction func sliderChanged(_ sender: UISlider) {
@@ -32,11 +36,21 @@ class ViewController: UIViewController {
         self.performSegue(withIdentifier: "screen", sender: self)
     }
     
-
+    @IBAction func helpPressed(_ sender: Any) {
+    }
+    
     @objc func sliderValueChanged() {
         // Atualizar o raio da CircleView quando o valor do slider for alterado
-        circleView.updateRadius(calculatePointToMm.calcularValorParaChave(key:CGFloat(sliderRing.value))!)
+        circleView.updateRadius(calculatePointToMm.calcularValorParaChave(key:Int(sliderRing.value)))
         valueMm.text = "\(calculatePointToMm.updateValorMM(key: CGFloat(sliderRing.value)) ?? 18.14)mm"
     }
-
+    
+    func setupButton() {
+        BotaoAnel.layer.cornerRadius = BotaoAnel.bounds.height/2
+        botaoAjuda.layer.cornerRadius = botaoAjuda.bounds.height/2
+        let maskPath = UIBezierPath(roundedRect: controlView.bounds, byRoundingCorners: [.topLeft, .topRight], cornerRadii: CGSize(width: 25, height: 25))
+        let maskLayer = CAShapeLayer()
+        maskLayer.path = maskPath.cgPath
+        controlView.layer.mask = maskLayer
+    }
 }
