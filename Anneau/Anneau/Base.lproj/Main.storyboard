@@ -5,7 +5,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -137,6 +136,7 @@
                             <constraint firstItem="tgm-1w-loI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yHb-pl-ffe"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="mXl-qm-efb"/>
                     <connections>
                         <outlet property="BotaoAnel" destination="W8B-9P-llb" id="6cb-79-zvG"/>
                         <outlet property="botaoAjuda" destination="tgm-1w-loI" id="hnr-xO-nSe"/>
@@ -163,18 +163,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aRr-r7-Lgb">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="270"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NhX-hc-aBs">
-                                        <rect key="frame" x="24" y="60" width="58" height="58"/>
-                                        <color key="backgroundColor" red="0.85490196080000003" green="0.72549019609999998" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="58" id="aGT-H4-Vcp"/>
-                                            <constraint firstAttribute="width" constant="58" id="tlA-0V-eUO"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <color key="tintColor" red="0.1764705882" green="0.1764705882" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="Ajuda?"/>
-                                    </button>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="16" minValue="1" maxValue="27" translatesAutoresizingMaskIntoConstraints="NO" id="Jlh-SY-mfX">
                                         <rect key="frame" x="22" y="183" width="349" height="31"/>
                                         <color key="minimumTrackTintColor" red="0.1764705882352941" green="0.1764705882352941" blue="0.1764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -199,19 +187,42 @@
                                         <color key="textColor" red="0.1764705882352941" green="0.1764705882352941" blue="0.1764705882352941" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UiH-1N-Lmv">
+                                        <rect key="frame" x="10" y="60" width="100" height="40"/>
+                                        <color key="backgroundColor" red="0.1764705882352941" green="0.1764705882352941" blue="0.1764705882352941" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="CJ5-zi-dgv"/>
+                                            <constraint firstAttribute="width" constant="100" id="kQ6-rL-ved"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.85490196080000003" green="0.72549019609999998" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Voltar"/>
+                                        <connections>
+                                            <action selector="backPressed:" destination="Odf-Q2-3IJ" eventType="touchUpInside" id="NDB-9V-e2L"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NhX-hc-aBs">
+                                        <rect key="frame" x="311" y="53" width="58" height="58"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.85490196080000003" green="0.72549019609999998" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="tintColor" red="0.1764705882" green="0.1764705882" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Ajuda?"/>
+                                    </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="NhX-hc-aBs" firstAttribute="leading" secondItem="aRr-r7-Lgb" secondAttribute="leading" constant="24" id="3aj-8W-iAI"/>
                                     <constraint firstItem="qSK-1v-zPA" firstAttribute="top" secondItem="Jlh-SY-mfX" secondAttribute="bottom" constant="24" id="AOl-de-feR"/>
                                     <constraint firstAttribute="height" constant="270" id="Flt-Hs-gnW"/>
                                     <constraint firstItem="1gU-P3-YHs" firstAttribute="centerX" secondItem="aRr-r7-Lgb" secondAttribute="centerX" id="Jca-9u-SRx"/>
                                     <constraint firstItem="Jlh-SY-mfX" firstAttribute="top" secondItem="1gU-P3-YHs" secondAttribute="bottom" constant="24" id="P0P-Nz-eOw"/>
                                     <constraint firstItem="Jlh-SY-mfX" firstAttribute="leading" secondItem="aRr-r7-Lgb" secondAttribute="leading" constant="24" id="Rif-Md-6Hv"/>
+                                    <constraint firstItem="UiH-1N-Lmv" firstAttribute="top" secondItem="aRr-r7-Lgb" secondAttribute="top" constant="60" id="Taj-TN-UU5"/>
                                     <constraint firstAttribute="trailing" secondItem="qSK-1v-zPA" secondAttribute="trailing" constant="10" id="TqH-Iz-Jg7"/>
                                     <constraint firstAttribute="trailing" secondItem="Jlh-SY-mfX" secondAttribute="trailing" constant="24" id="ikv-aQ-KUt"/>
                                     <constraint firstItem="qSK-1v-zPA" firstAttribute="leading" secondItem="aRr-r7-Lgb" secondAttribute="leading" constant="10" id="mrv-RB-RS0"/>
-                                    <constraint firstItem="NhX-hc-aBs" firstAttribute="top" secondItem="aRr-r7-Lgb" secondAttribute="top" constant="60" id="t3o-QE-UfK"/>
+                                    <constraint firstItem="UiH-1N-Lmv" firstAttribute="leading" secondItem="aRr-r7-Lgb" secondAttribute="leading" constant="10" id="wHU-xL-UAt"/>
                                     <constraint firstItem="1gU-P3-YHs" firstAttribute="centerY" secondItem="aRr-r7-Lgb" secondAttribute="centerY" id="x6Z-Vs-5Br"/>
                                 </constraints>
                             </view>
@@ -221,7 +232,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KVY-X6-56c"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="IsX-ZF-xez" firstAttribute="leading" secondItem="KVY-X6-56c" secondAttribute="leading" constant="50" id="2l9-Im-ZUb"/>
                             <constraint firstItem="aRr-r7-Lgb" firstAttribute="trailing" secondItem="KVY-X6-56c" secondAttribute="trailing" id="5dc-Vz-jTy"/>
@@ -234,6 +245,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="5m6-gM-EG5"/>
                     <connections>
+                        <outlet property="backButton" destination="UiH-1N-Lmv" id="Lmg-FH-WRR"/>
                         <outlet property="fingerView" destination="IsX-ZF-xez" id="fNn-hw-qAh"/>
                         <outlet property="helpButton" destination="NhX-hc-aBs" id="JfU-8I-EZ5"/>
                         <outlet property="sliderRing" destination="Jlh-SY-mfX" id="Cuy-Ce-Xn4"/>
@@ -243,14 +255,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QCH-vI-Zc9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="908.69565217391312" y="-32.8125"/>
+            <point key="canvasLocation" x="1108" y="-31"/>
         </scene>
     </scenes>
     <resources>
         <image name="detalhesCircleView" width="119" height="181"/>
         <image name="vecteezy_element-geometric-shapes-memphis-design-retro-elements_22944636 2detcircle" width="118" height="215"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

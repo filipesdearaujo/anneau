@@ -21,7 +21,7 @@ class CircleView: UIView {
 
     func circulo() {
         // Criando a cor desejada para o círculo (por exemplo, amarelo)
-        let circleColor = UIColor.yellow
+        let circleColor = UIColor.systemYellow
         circleColor.setStroke()
 
         // Criando o caminho do círculo
@@ -36,7 +36,7 @@ class CircleView: UIView {
         circle.stroke()
 
         // Criando a cor desejada para o círculo "rock" (por exemplo, azul)
-        let rockColor = UIColor.blue
+        let rockColor = UIColor.systemTeal
         rockColor.setStroke()
         rockColor.setFill()
 
