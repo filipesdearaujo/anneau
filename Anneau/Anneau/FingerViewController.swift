@@ -27,6 +27,10 @@ class FingerViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func helpTapped(_ sender: Any) {
+        self.performSegue(withIdentifier: "helpScreen", sender: self)
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

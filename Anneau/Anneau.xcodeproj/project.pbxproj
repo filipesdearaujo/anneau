@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C41DF63E2B64924A00824B1C /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C41DF63D2B64924A00824B1C /* Media.xcassets */; };
 		C438AEA12B61F01A00406A19 /* CalculatePointToMm.swift in Sources */ = {isa = PBXBuildFile; fileRef = C438AEA02B61F01A00406A19 /* CalculatePointToMm.swift */; };
+		C4756CA12B69968100D0E549 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4756CA02B69968100D0E549 /* HelpViewController.swift */; };
 		C4AA18672B56A4800037869F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AA18662B56A4800037869F /* AppDelegate.swift */; };
 		C4AA18692B56A4800037869F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AA18682B56A4800037869F /* SceneDelegate.swift */; };
 		C4AA186B2B56A4800037869F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AA186A2B56A4800037869F /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		C41DF63D2B64924A00824B1C /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		C438AEA02B61F01A00406A19 /* CalculatePointToMm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatePointToMm.swift; sourceTree = "<group>"; };
+		C4756CA02B69968100D0E549 /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		C4AA18632B56A4800037869F /* Anneau.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Anneau.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4AA18662B56A4800037869F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4AA18682B56A4800037869F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 				C4AD62492B5F390600D1B16F /* FingerViewController.swift */,
 				C4F6342B2B605A2B0006657B /* FingerView.swift */,
 				C438AEA02B61F01A00406A19 /* CalculatePointToMm.swift */,
+				C4756CA02B69968100D0E549 /* HelpViewController.swift */,
 				C4AA186C2B56A4800037869F /* Main.storyboard */,
 				C4AA18712B56A4820037869F /* LaunchScreen.storyboard */,
 				C4AA18742B56A4820037869F /* Info.plist */,
@@ -153,6 +156,7 @@
 				C438AEA12B61F01A00406A19 /* CalculatePointToMm.swift in Sources */,
 				C4AA187B2B56A4DA0037869F /* CircleView.swift in Sources */,
 				C4AA186B2B56A4800037869F /* ViewController.swift in Sources */,
+				C4756CA12B69968100D0E549 /* HelpViewController.swift in Sources */,
 				C4AA18672B56A4800037869F /* AppDelegate.swift in Sources */,
 				C4AA18692B56A4800037869F /* SceneDelegate.swift in Sources */,
 				C4AD624A2B5F390600D1B16F /* FingerViewController.swift in Sources */,
