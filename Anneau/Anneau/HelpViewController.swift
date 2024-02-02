@@ -16,6 +16,11 @@ class HelpViewController: UIViewController {
         setup()
     }
     
+    @IBAction func DoneTapped(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
     func setup() {
         warningView.layer.cornerRadius = 20
         }

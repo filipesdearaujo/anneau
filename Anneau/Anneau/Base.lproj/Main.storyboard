@@ -292,8 +292,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nrd-df-1zF">
                                 <rect key="frame" x="40" y="170" width="313" height="502"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6bi-12-7gR">
-                                        <rect key="frame" x="37" y="53" width="239" height="124"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6bi-12-7gR">
+                                        <rect key="frame" x="37" y="55.000000000000007" width="239" height="125.66666666666669"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alinhe a borda interna de seu anel com o circulo." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FLs-J2-0eg">
                                         <rect key="frame" x="37" y="230.66666666666669" width="239" height="40.666666666666686"/>
@@ -313,6 +313,15 @@
                                         <color key="textColor" red="0.1764705882" green="0.1764705882" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ff3-RZ-qhB">
+                                        <rect key="frame" x="255" y="19" width="44" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="✖️"/>
+                                        <connections>
+                                            <action selector="DoneTapped:" destination="hpH-8h-QaF" eventType="touchUpInside" id="48n-YL-xSp"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -320,11 +329,12 @@
                                     <constraint firstItem="FLs-J2-0eg" firstAttribute="centerY" secondItem="Nrd-df-1zF" secondAttribute="centerY" id="8lf-wf-tvy"/>
                                     <constraint firstItem="53Y-Po-9HC" firstAttribute="top" secondItem="Nrd-df-1zF" secondAttribute="top" constant="24" id="Gz8-gF-8dI"/>
                                     <constraint firstItem="FLs-J2-0eg" firstAttribute="leading" secondItem="Nrd-df-1zF" secondAttribute="leading" constant="37" id="IBt-pD-I6G"/>
-                                    <constraint firstItem="6bi-12-7gR" firstAttribute="top" secondItem="53Y-Po-9HC" secondAttribute="bottom" constant="8" symbolic="YES" id="IaI-uN-XNN"/>
                                     <constraint firstItem="Ibg-FT-q1X" firstAttribute="top" secondItem="FLs-J2-0eg" secondAttribute="bottom" constant="8" id="Jw0-xV-lHg"/>
                                     <constraint firstAttribute="trailing" secondItem="Ibg-FT-q1X" secondAttribute="trailing" constant="37" id="N4D-w4-HOP"/>
+                                    <constraint firstItem="FLs-J2-0eg" firstAttribute="top" secondItem="6bi-12-7gR" secondAttribute="bottom" constant="50" id="bxG-16-Tdz"/>
                                     <constraint firstAttribute="trailing" secondItem="6bi-12-7gR" secondAttribute="trailing" constant="37" id="cje-Z1-rqx"/>
                                     <constraint firstItem="53Y-Po-9HC" firstAttribute="leading" secondItem="Nrd-df-1zF" secondAttribute="leading" constant="37" id="kLf-t9-O5U"/>
+                                    <constraint firstItem="6bi-12-7gR" firstAttribute="top" secondItem="53Y-Po-9HC" secondAttribute="bottom" constant="10" id="uTp-GK-FLs"/>
                                     <constraint firstItem="6bi-12-7gR" firstAttribute="leading" secondItem="Nrd-df-1zF" secondAttribute="leading" constant="37" id="vKs-6f-zVt"/>
                                     <constraint firstAttribute="trailing" secondItem="FLs-J2-0eg" secondAttribute="trailing" constant="37" id="wKS-Dk-Gd9"/>
                                 </constraints>
@@ -349,7 +359,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RmT-Ea-dV1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="558" y="669"/>
+            <point key="canvasLocation" x="556.48854961832058" y="668.30985915492965"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
