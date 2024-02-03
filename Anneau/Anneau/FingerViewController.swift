@@ -28,7 +28,7 @@ class FingerViewController: UIViewController {
     }
     
     @IBAction func helpTapped(_ sender: Any) {
-        self.performSegue(withIdentifier: "helpScreen", sender: self)
+        self.performSegue(withIdentifier: "helpFinger", sender: self)
     }
     
     
@@ -48,5 +48,12 @@ class FingerViewController: UIViewController {
     func setupButton() {
         backButton.layer.cornerRadius = backButton.bounds.height/2
         backButton.layer.cornerRadius = backButton.bounds.height/2
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "helpFinger" {
+            let HelpVC = segue.destination as! HelpViewController
+            HelpVC.warningTextLabel = "Alinhe as bordas de seu dedo com o as barras deslizantes, utilize a linha cinza central para alinhar com seu dedo. Não há diferença entre tamanho para dedo masculino e feminino."
+        }
     }
 }

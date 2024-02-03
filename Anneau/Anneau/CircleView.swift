@@ -20,10 +20,6 @@ class CircleView: UIView {
         }
 
     func circulo() {
-        // Criando a cor desejada para o círculo (por exemplo, amarelo)
-        let circleColor = UIColor.systemYellow
-        circleColor.setStroke()
-
         // Criando o caminho do círculo
         let circle = UIBezierPath(arcCenter: CGPoint(x: bounds.width/2, y: bounds.height/2),
                                   radius: radius,
@@ -34,18 +30,6 @@ class CircleView: UIView {
         // Configurando a largura do traço para o círculo
         circle.lineWidth = 3
         circle.stroke()
-
-        // Criando a cor desejada para o círculo "rock" (por exemplo, azul)
-        let rockColor = UIColor.systemTeal
-        rockColor.setStroke()
-        rockColor.setFill()
-
-        let rock = UIBezierPath(arcCenter: CGPoint(x: bounds.width/2, y: bounds.height/2 - radius - circle.lineWidth), radius: 3, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
-
-        // Configurando a largura do traço para o círculo "rock"
-        rock.lineWidth = 5
-        rock.stroke()
-        rock.fill()
     }
 
 
