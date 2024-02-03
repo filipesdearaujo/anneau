@@ -293,10 +293,10 @@
                                 <rect key="frame" x="40" y="170" width="313" height="502"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" image="AnelDemonstração" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6bi-12-7gR">
-                                        <rect key="frame" x="10" y="63.666666666666657" width="293" height="327"/>
+                                        <rect key="frame" x="10" y="63.666666666666657" width="293" height="313"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alinhe a borda interna de seu anel com o circulo. Não há diferença entre tamanho de aneis masculinos e femininos." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FLs-J2-0eg">
-                                        <rect key="frame" x="10" y="410.66666666666663" width="293" height="81.333333333333314"/>
+                                        <rect key="frame" x="10" y="396.66666666666663" width="293" height="81.333333333333314"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.1764705882" green="0.1764705882" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -325,8 +325,7 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="FLs-J2-0eg" secondAttribute="bottom" constant="10" id="Fcv-0u-k4L"/>
-                                    <constraint firstAttribute="bottom" secondItem="FLs-J2-0eg" secondAttribute="bottom" constant="10" id="GNw-eu-o1J"/>
+                                    <constraint firstAttribute="bottom" secondItem="FLs-J2-0eg" secondAttribute="bottom" constant="24" id="Fcv-0u-k4L"/>
                                     <constraint firstItem="53Y-Po-9HC" firstAttribute="leading" secondItem="Nrd-df-1zF" secondAttribute="leading" constant="37" id="IH1-ac-1c4"/>
                                     <constraint firstAttribute="trailing" secondItem="FLs-J2-0eg" secondAttribute="trailing" constant="10" id="LVi-E5-Xos"/>
                                     <constraint firstItem="6bi-12-7gR" firstAttribute="top" secondItem="Ff3-RZ-qhB" secondAttribute="bottom" constant="10" id="NJk-LZ-kCn"/>
@@ -335,9 +334,7 @@
                                     <constraint firstItem="FLs-J2-0eg" firstAttribute="top" secondItem="6bi-12-7gR" secondAttribute="bottom" constant="20" id="WO1-bB-DS4"/>
                                     <constraint firstItem="FLs-J2-0eg" firstAttribute="leading" secondItem="Nrd-df-1zF" secondAttribute="leading" constant="10" id="dZl-Zb-gOq"/>
                                     <constraint firstItem="Ff3-RZ-qhB" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="53Y-Po-9HC" secondAttribute="trailing" constant="8" symbolic="YES" id="gSk-QW-Orw"/>
-                                    <constraint firstItem="FLs-J2-0eg" firstAttribute="leading" secondItem="Nrd-df-1zF" secondAttribute="leading" constant="10" id="i2N-lh-mos"/>
                                     <constraint firstItem="Ff3-RZ-qhB" firstAttribute="centerY" secondItem="53Y-Po-9HC" secondAttribute="centerY" id="n3w-ff-oQE"/>
-                                    <constraint firstAttribute="trailing" secondItem="FLs-J2-0eg" secondAttribute="trailing" constant="10" id="nDJ-7t-DAj"/>
                                     <constraint firstItem="53Y-Po-9HC" firstAttribute="top" secondItem="Nrd-df-1zF" secondAttribute="top" constant="24" id="qXq-wf-VSi"/>
                                     <constraint firstAttribute="trailing" secondItem="Ff3-RZ-qhB" secondAttribute="trailing" constant="14" id="y7I-yl-p9K"/>
                                 </constraints>

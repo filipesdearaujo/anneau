@@ -53,7 +53,8 @@ class FingerViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "helpFinger" {
             let HelpVC = segue.destination as! HelpViewController
-            HelpVC.warningTextLabel = "Alinhe as bordas de seu dedo com o as barras deslizantes, utilize a linha cinza central para alinhar com seu dedo. Não há diferença entre tamanho para dedo masculino e feminino."
+            HelpVC.warningTextLabel = "Alinhe as bordas de seu dedo com o as barras deslizantes, utilize a linha cinza central para alinhar com seu dedo. Não há diferença de tamanho entre dedo Masculino e Feminino."
+            HelpVC.warningImage = "hand"
         }
     }
 }

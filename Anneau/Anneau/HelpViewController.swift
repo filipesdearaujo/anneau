@@ -10,6 +10,7 @@ import UIKit
 class HelpViewController: UIViewController {
     
     var warningTextLabel: String?
+    var warningImage: String?
 
     @IBOutlet weak var warningView: UIView!
     @IBOutlet weak var imageView: UIImageView!
@@ -26,6 +27,7 @@ class HelpViewController: UIViewController {
     func setup() {
         warningView.layer.cornerRadius = 20
         warningLabel.text = warningTextLabel
+        imageView.image = UIImage(named: warningImage ?? "AnelDemonstração")
     }
 }
 
