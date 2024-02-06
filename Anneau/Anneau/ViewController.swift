@@ -42,7 +42,7 @@ class ViewController: UIViewController {
     @objc func sliderValueChanged() {
         // Atualizar o raio da CircleView quando o valor do slider for alterado
         circleView.updateRadius(calculatePointToMm.calcularValorParaChave(key:Int(sliderRing.value)))
-        valueMm.text = "\(calculatePointToMm.updateValorMM(key: CGFloat(sliderRing.value)) ?? 18.14)mm"
+        valueMm.text = "\(calculatePointToMm.updateValorMM(key: sliderRing.value) ?? 18.14)mm"
     }
     
     func setupButton() {

@@ -42,7 +42,7 @@ class FingerViewController: UIViewController {
 
     @objc func sliderValueChanged() {
         fingerView.updateSize(calculatePointToMm.calcularValorParaChave(key:Int(sliderRing.value))) // Atualizar o raio da CircleView quando o valor do slider for alterado
-        valueMm.text = "\(calculatePointToMm.updateValorMM(key: CGFloat(sliderRing.value)) ?? 18.14)mm" // Atualizar o texto de Milimetros da CircleView quando o valor do slider for alterado
+        valueMm.text = "\(calculatePointToMm.updateValorMM(key: sliderRing.value) ?? 18.14)mm" // Atualizar o texto de Milimetros da CircleView quando o valor do slider for alterado
     }
     
     func setupButton() {
