@@ -47,6 +47,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C48FDC0E2B7390D200F6FF1F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C41DF63D2B64924A00824B1C /* Media.xcassets */,
+				C438AEA02B61F01A00406A19 /* CalculatePointToMm.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C48FDC0F2B73918D00F6FF1F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C4AA186C2B56A4800037869F /* Main.storyboard */,
+				C4AA18712B56A4820037869F /* LaunchScreen.storyboard */,
+				C4AA187A2B56A4DA0037869F /* CircleView.swift */,
+				C4F6342B2B605A2B0006657B /* FingerView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C48FDC102B7391C800F6FF1F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C4AA18682B56A4800037869F /* SceneDelegate.swift */,
+				C4AA18662B56A4800037869F /* AppDelegate.swift */,
+				C4AA186A2B56A4800037869F /* ViewController.swift */,
+				C4AD62492B5F390600D1B16F /* FingerViewController.swift */,
+				C4756CA02B69968100D0E549 /* HelpViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		C4AA185A2B56A4800037869F = {
 			isa = PBXGroup;
 			children = (
@@ -66,18 +98,10 @@
 		C4AA18652B56A4800037869F /* Anneau */ = {
 			isa = PBXGroup;
 			children = (
-				C4AA18662B56A4800037869F /* AppDelegate.swift */,
-				C4AA18682B56A4800037869F /* SceneDelegate.swift */,
-				C4AA186A2B56A4800037869F /* ViewController.swift */,
-				C4AA187A2B56A4DA0037869F /* CircleView.swift */,
-				C4AD62492B5F390600D1B16F /* FingerViewController.swift */,
-				C4F6342B2B605A2B0006657B /* FingerView.swift */,
-				C438AEA02B61F01A00406A19 /* CalculatePointToMm.swift */,
-				C4756CA02B69968100D0E549 /* HelpViewController.swift */,
-				C4AA186C2B56A4800037869F /* Main.storyboard */,
-				C4AA18712B56A4820037869F /* LaunchScreen.storyboard */,
+				C48FDC102B7391C800F6FF1F /* Controller */,
+				C48FDC0F2B73918D00F6FF1F /* View */,
+				C48FDC0E2B7390D200F6FF1F /* Model */,
 				C4AA18742B56A4820037869F /* Info.plist */,
-				C41DF63D2B64924A00824B1C /* Media.xcassets */,
 			);
 			path = Anneau;
 			sourceTree = "<group>";
