@@ -57,7 +57,7 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "helpRing" {
             let HelpVC = segue.destination as! HelpViewController
-            HelpVC.warningTextLabel = "Alinhe a borda interna de seu anel com o circulo. Não há diferença entre tamanho de aneis masculinos e femininos."
+            HelpVC.warningTextLabel = "Posicione a borda interna do seu anel com o círculo indicado. Não há distinção de tamanho entre anéis masculinos e femininos."
         }
     }
 }
